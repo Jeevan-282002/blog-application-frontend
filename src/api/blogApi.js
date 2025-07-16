@@ -1,17 +1,12 @@
 import axios from 'axios';
 import jwtDecode from 'jwt-decode'; // ✅ Correct for jwt-decode@3.1.2
 import dayjs from 'dayjs';
-import axios from 'axios';
 
 const blogApi = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL, // comes from Vercel env
 });
 
 
-
-const blogApi = axios.create({
-  baseURL,
-});
 
 // Global loading setter to be initialized from React context
 let setLoadingGlobal = null;

@@ -1,8 +1,13 @@
 import axios from 'axios';
 import jwtDecode from 'jwt-decode'; // ✅ Correct for jwt-decode@3.1.2
 import dayjs from 'dayjs';
+import axios from 'axios';
 
-let baseURL = 'http://localhost:8000';
+const blogApi = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE_URL, // comes from Vercel env
+});
+
+
 
 const blogApi = axios.create({
   baseURL,
